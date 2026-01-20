@@ -1,0 +1,53 @@
+/* pages/login-test/index.wxss */
+.container {
+  padding: 20rpx;
+  background-color: #f6f7f8;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 36rpx;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40rpx;
+  color: #1a1a1a;
+}
+
+.section {
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.info {
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 1.6;
+  display: block;
+}
+
+.test-btn, .login-btn {
+  width: 100%;
+  background-color: white;
+  color: #2b8cee;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #2b8cee 0%, #1a6bb5 100%);
+  color: white;
+}
+
+.test-btn:active, .login-btn:active {
+  transform: scale(0.98);
+}

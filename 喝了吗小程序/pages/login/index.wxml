@@ -1,0 +1,25 @@
+<!-- pages/login/index.wxml -->
+<view class="container">
+  <!-- 品牌展示区 -->
+  <view class="brand-section">
+    <view class="logo-container">
+      <image class="logo" src="/images/logo.svg" mode="aspectFit"></image>
+    </view>
+    <text class="slogan">让喝水变得更有趣</text>
+  </view>
+
+  <!-- 登录按钮 -->
+  <view class="login-section">
+    <button class="login-btn" bindtap="onLoginTap" hover-class="login-btn-active">
+      微信一键登录
+    </button>
+  </view>
+
+  <!-- 服务条款 -->
+  <view class="terms-section">
+    <text class="terms-text">登录即表示您同意</text>
+    <navigator class="terms-link" url="/pages/terms/index">《服务条款》</navigator>
+    <text class="terms-text">和</text>
+    <navigator class="terms-link" url="/pages/privacy/index">《隐私政策》</navigator>
+  </view>
+</view>

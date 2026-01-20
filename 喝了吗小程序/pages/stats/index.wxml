@@ -1,0 +1,54 @@
+<!-- pages/stats/index.wxml -->
+<view class="container">
+  <!-- 标题栏 -->
+  <view class="header">
+    <text class="page-title">饮水统计</text>
+    <button class="share-btn" bindtap="shareStats">
+      <image src="/images/share-icon.png" mode="aspectFit"></image>
+    </button>
+  </view>
+
+  <!-- 统计卡片 -->
+  <view class="stats-cards">
+    <view class="stat-card">
+      <text class="stat-label">本周平均</text>
+      <text class="stat-value">{{weeklyAverage}}</text>
+      <text class="stat-unit">杯/天</text>
+    </view>
+    <view class="stat-card">
+      <text class="stat-label">完成率</text>
+      <text class="stat-value">{{completionRate}}</text>
+      <text class="stat-unit">%</text>
+    </view>
+  </view>
+
+  <!-- 图表区域 -->
+  <view class="chart-section">
+    <view class="chart-header">
+      <text class="chart-title">每日饮水记录</text>
+      <view class="chart-toggle">
+        <button class="toggle-btn {{activePeriod === 'week' ? 'active' : ''}}" bindtap="switchPeriod" data-period="week">周</button>
+        <button class="toggle-btn {{activePeriod === 'month' ? 'active' : ''}}" bindtap="switchPeriod" data-period="month">月</button>
+      </view>
+    </view>
+    <view class="chart-container">
+      <canvas class="bar-chart" canvas-id="barChart"></canvas>
+    </view>
+  </view>
+
+  <!-- 时间线 -->
+  <view class="timeline-section">
+    <view class="section-header">
+      <text class="section-title">今日饮水时间线</text>
+    </view>
+    <view class="timeline">
+      <view class="timeline-item" wx:for="{{todayTimeline}}" wx:key="index">
+        <view class="timeline-dot"></view>
+        <view class="timeline-content">
+          <text class="timeline-time">{{item.time}}</text>
+          <text class="timeline-text">喝了1杯水</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

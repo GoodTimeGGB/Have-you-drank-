@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink Yet - Achievements</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl">
+<!-- Top Navigation -->
+<div class="flex items-center justify-between p-4 pb-2 sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 24px;">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Header Title -->
+<div class="px-4 pb-4">
+<h1 class="text-[#111418] dark:text-white text-[32px] font-extrabold leading-tight tracking-tight">Your Trophy Case</h1>
+<p class="text-[#637588] dark:text-[#93adc8] text-base font-medium mt-1">Keep drinking to unlock them all!</p>
+</div>
+<!-- Progress Summary Card -->
+<div class="px-4 pb-6">
+<div class="bg-white dark:bg-[#1C2630] rounded-xl p-5 shadow-sm border border-[#e5e7eb] dark:border-[#2a3845]">
+<div class="flex justify-between items-end mb-2">
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-xs font-bold uppercase tracking-wider">Total Progress</p>
+<p class="text-primary text-xl font-bold mt-1">3/12 Unlocked</p>
+</div>
+<span class="material-symbols-outlined text-primary mb-1" style="font-size: 28px;">emoji_events</span>
+</div>
+<div class="w-full bg-[#e5e7eb] dark:bg-[#324d67] rounded-full h-3 overflow-hidden">
+<div class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<!-- Latest Achievement (Featured) -->
+<div class="px-4 pb-2">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold mb-3">Latest Achievement</h2>
+<div class="rounded-xl border border-[#e5e7eb] dark:border-[#324d67] bg-white dark:bg-[#1C2630] p-4 flex flex-col gap-4 shadow-md relative overflow-hidden group">
+<!-- Decorative background glow -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="shrink-0 relative">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-primary flex items-center justify-center shadow-lg shadow-primary/30">
+<div class="w-14 h-14 rounded-full bg-cover bg-center" data-alt="Stylized superhero cape icon representing Hydro Hero achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsGKLmbzZSNSeEMZ2a6y6BTAw0St-tcHwYS040dkhBCGqYhzFkunBjMOGTOmI14Ezje6WVl-oxDKD7Y3Ejx3UhbKBHFEM2S2lSxwJkuGzJLRZfu2T51aKdKkruKq4k42ag6_ABksjY7i0mdlmqMxkmwR0NXOxyu5viyV2RgTVS9KgB7gXZ0SNOaTlHPBtRVof8wiJhj_E2HmoDoh-x8vO_CfbQQboaHl23I-mZP6F0VVlTaG8f9Wzx_LpiQjkvHzyMlRtFZtQxcl39');"></div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-yellow-400 rounded-full p-1 border-2 border-white dark:border-[#1C2630]">
+<span class="material-symbols-outlined text-white text-[12px] font-bold block">star</span>
+</div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Hydro Hero</h3>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-medium mt-1">7 day streak! You drank 8 glasses every day for a week.</p>
+<p class="text-[#637588] dark:text-[#93adc8] text-xs mt-2 opacity-70">Unlocked on Oct 24</p>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-[#07c160] hover:bg-[#06ad56] text-white h-12 rounded-full font-bold text-sm transition-transform active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">share</span>
+                    Share to WeChat
+                </button>
+</div>
+</div>
+<!-- All Medals Grid -->
+<div class="flex flex-col gap-4 p-4 pb-20">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold">All Medals</h2>
+<div class="grid grid-cols-3 gap-y-6 gap-x-2">
+<!-- Item 1: Unlocked -->
+<div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+<div class="relative w-20 h-20 rounded-full bg-gradient-to-tr from-cyan-300 to-blue-500 p-0.5 shadow-lg shadow-blue-500/20 transition-transform group-hover:scale-105">
+<div class="w-full h-full rounded-full bg-[#1C2630] flex items-center justify-center overflow-hidden border-2 border-transparent">
+<div class="w-full h-full bg-cover bg-center" data-alt="Single water droplet icon for First Sip achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzwk0LvaLl31xCWExayjoBq4FCOG68xvMdpIihK8EAALF9Euh8F7gLJ2qwktLDjUCSDGnyi4fnDupqDafSO4K5DSFkvpxCBCR9k6Ex0bhKNiCORuYe6agRV0bCD5DwIw3tHhLrJYE47bX8KJ4_DKQQq9whTpOXcVEPZXI67YNg69PjCNF2eZLuz75_A8B2jEDiaO2zBrRtpAXlm7mwoRZKpSNdUYVmXIurKt9WFXNq9lXCG4kTUoWiGvA0S9SB7y5za15AMYKHFTgf');"></div>
+</div>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-tight">First Sip</p>
+<p class="text-[#637588] dark:text-[#93adc8] text-[10px] font-medium leading-tight mt-0.5">1 day goal</p>
+</div>
+</div>
+<!-- Item 2: Unlocked (Duplicate for visual balance) -->
+<div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+<div class="relative w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-300 to-amber-500 p-0.5 shadow-lg shadow-amber-500/20 transition-transform group-hover:scale-105">
+<div class="w-full h-full rounded-full bg-[#1C2630] flex items-center justify-center overflow-hidden border-2 border-transparent">
+<div class="w-full h-full bg-cover bg-center" data-alt="Golden crown icon for Water Master achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlPxcv_ymEgVlOPTPW55wfZjBWZ7GPvf5HZFm8PbpL-BeZvQeemxGkQwmv8UstRAJyMX79Wmk3fvpbmrtbv7Z6Lf3hpDtNjROjOHN9I5lWo9J_az5Q9S0dN2VzI-CuGQ5ts1NxeNlIWOHR4ywk_1pZa4HVbZJjmRHy78zbtTy3GsMEsbZ3Rrp8A2ikgVXe5P7MM-1ovsmCd4Nv93Qv3leg94aLc_mNzj464auI3fPcSu2J1U5gtwB4hXPuclZg11wTmM6MCP83aWmD');"></div>
+</div>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-tight">Water Master</p>
+<p class="text-[#637588] dark:text-[#93adc8] text-[10px] font-medium leading-tight mt-0.5">30 day streak</p>
+</div>
+</div>
+<!-- Item 3: Unlocked (Hydro Hero small version) -->
+<div class="flex flex-col items-center text-center gap-2 group cursor-pointer">
+<div class="relative w-20 h-20 rounded-full bg-gradient-to-tr from-blue-400 to-primary p-0.5 shadow-lg shadow-primary/20 transition-transform group-hover:scale-105">
+<div class="w-full h-full rounded-full bg-[#1C2630] flex items-center justify-center overflow-hidden border-2 border-transparent">
+<div class="w-full h-full bg-cover bg-center" data-alt="Superhero cape icon for Hydro Hero achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeNy6OcV0kUupvWoXgEAu-y9AQJaNilyP-sb9zlsvu0vXRvdTnYpT5I6ViJl_3CGe-OZ88VXLVa8HkKoqaMK7rDOdroFceXEcK8nizdCkubs7m4EfKh8zLlnUPfXXjeFvLtzZL7yfAW_XZVJ-LKA43BgfBklh9sQ6wefeM2eefJ-GWc9Jn5IibMtCxqYZj0bul_89jvHRa9qTqHUkaNye_JQ4i4xbfSo6qpxojCm7jD6NDcG_C02oHKE3KmXI5v3wKSu2JObUKgNLy');"></div>
+</div>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-tight">Hydro Hero</p>
+<p class="text-[#637588] dark:text-[#93adc8] text-[10px] font-medium leading-tight mt-0.5">7 day streak</p>
+</div>
+</div>
+<!-- Item 4: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Alarm clock icon for Early Bird achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcl3q2JQhqHyTrUoP19kFDN-ClOi7PHv3fo4c6gcZTChMCxS7TXt8jJ2-lgYlO07j6NRKtfysZ-17Jf8ZlOWnWNbAydzklyYsMVq0WE9S6NXAKzwq2MyQwu103niOoHJItv6aShaDQpUct9lmfC3AsRvC0HpqpCgud55lTsP-XNJ3qwJNCoS61BMJSbAEO7nBxJgC3qCugRE0wtZoWcfqWdwhZhZ1nvvsJP6LFZNnCBqIOcoffKxUwYdblXtxegv8qEsAEIYyZLqJd');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Early Bird</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">Goal before 12PM</p>
+</div>
+</div>
+<!-- Item 5: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Moon and stars icon for Night Owl achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPg225rZkP3TVadjlk81Dm_66LGYjbEt5UVv9cprgqgKJlPE-tZ5hjKzxrPb6zWJ6_s-FFVnzGnLoud2bLor1xLb3c_5mfYBBDjwwRPK_BlgYC8s6MX-qpVl4tSmL3kO0ROc9vLi4wqyVGpgMfEIttgv0q-VyVl1DSsijgK3b0jNbGGkgrmYj8RFYz2cl4L6weJCF2wRj_YPzVqmKzFOaNwAdmrNfxUse9GJ3SfO226zso6SkmpLa7QHJNuFlRZHxoOe-GzFbgmqdU');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Night Owl</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">Goal after 8PM</p>
+</div>
+</div>
+<!-- Item 6: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<!-- Using a generic nature/cactus texture for drought survivor -->
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Cactus plant icon for Drought Survivor achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1fzaXkJ1rMWVtapIm_-_BWxEJ54kS0e2uUPnK3uzNQgFHTG192kqAxLqKCRmJBalnof7NPlog06TRwMUxznNQ_fPY_vU5StOcJuALvrQWtcHEGKeu3RbVvhEsInuFle6tPDW-BClb_5pOgvbMcRz1Y_sXWenQ8ZcvGAPRWViwkiWmV-9n1A2VVprad5ZSv3qQF-nPiUsoNrjlr4tJK7T7-5xZhTEt_qWyVHTNc5NU9h0U69XDW17LPl2uUAr7cEIy_XDlgxt_aiR-');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Survivor</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">Recover streak</p>
+</div>
+</div>
+<!-- Item 7: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Running shoes icon for Marathon Drinker achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCv73OBnn0faO7NOstNHka30lxpWF1Itt9OVvEgYbKLTTzHHWPCnoN_mLLani1WBOFQ2x5l9WkS2btn9K0AFRnfNhGNUzH312-W3kY7NmqqNFaKkDiImjvXvzFrF8YtU7MeBHhv5BynnuL4G15aFfow0uvFeasyaBYW468H-H8plIG852GGApPQzDwEWwxpmQ99O1e-kXdeBJpHnDbkowhBQmSGVlvDL5_0jKFESGOc9Vce83GK7nXsmtSdx8JgB3vpXK_mYW0EkxsW');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Marathon</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">100 days total</p>
+</div>
+</div>
+<!-- Item 8: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Soda can crossed out icon for Pure Water achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1DpxreCT48c945EdM2Aj4sJdjFrLflMciAZnzOpKBUaUe-eITmS7gmC1MZ8m32lURZcPnUFyXEVVr57-BF7lE5o7k9CSCBH4yG8VPK0bNCvhy2d-jEUkIUNXUzB-0Oe24lnf657qN5wvGzInfiuWyC5MvXj3ZfuCBGRyWqPPgpBmF1jka4GAEnQmuFRdlWhyg48bKKG4Lii-s9zHsc-R39QGxre4f9zwPP8fjeWI4nWVIM6ty_42Ote-EG7DIO053dp5fXQ57q8qj');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Purist</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">No soda 7 days</p>
+</div>
+</div>
+<!-- Item 9: Locked -->
+<div class="flex flex-col items-center text-center gap-2 group">
+<div class="relative w-20 h-20 rounded-full bg-[#e5e7eb] dark:bg-[#2a3845] flex items-center justify-center overflow-hidden grayscale opacity-70">
+<div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/80" style="font-size: 24px;">lock</span>
+</div>
+<div class="w-14 h-14 bg-cover bg-center opacity-50" data-alt="Brain icon for Smart Drinker achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOxXt44BCeUKgXxVKxgocXejy_KLbz5C3SnfPahRn0B73eXNk1XPfDq9MLRBLY_4BuajbgmP6hhoTJtv0IqiuwYOtK9aAS3eAhTEjlHnD7GhcwdtpJ9lSr-vOytN2ky14kQ03EOCbqZhNi6-UMoeh_hywAgEshcy8k1Wom5UfFhqYeP3A3brsifx0fkYOLd86l64ZOV54vYwTIhyPtF9Tbtw5s6PM8jlhUG7Rx4zPeL4IpjHgYzIq2-G4ZxUbfMlbSgf627jMggxYi');"></div>
+</div>
+<div>
+<p class="text-[#637588] dark:text-[#93adc8] text-sm font-bold leading-tight">Smart Sip</p>
+<p class="text-[#9ca3af] dark:text-[#5d7285] text-[10px] font-medium leading-tight mt-0.5">Read 5 tips</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Spacer -->
+<div class="h-20 bg-transparent"></div>
+<!-- Bottom Navigation Bar (Fixed) -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white dark:bg-[#111a22] border-t border-[#e5e7eb] dark:border-[#2a3845] flex justify-around items-center h-16 px-4 pb-2">
+<button class="flex flex-col items-center justify-center gap-1 w-16 h-full text-[#637588] dark:text-[#93adc8]">
+<span class="material-symbols-outlined" style="font-size: 24px;">water_drop</span>
+<span class="text-[10px] font-medium">Drink</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 h-full text-[#637588] dark:text-[#93adc8]">
+<span class="material-symbols-outlined" style="font-size: 24px;">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 h-full text-primary relative">
+<div class="absolute -top-1 w-8 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(43,140,238,0.5)]"></div>
+<span class="material-symbols-outlined filled" style="font-size: 24px;">emoji_events</span>
+<span class="text-[10px] font-bold">Awards</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 h-full text-[#637588] dark:text-[#93adc8]">
+<span class="material-symbols-outlined" style="font-size: 24px;">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

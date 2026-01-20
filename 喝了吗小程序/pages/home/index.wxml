@@ -1,0 +1,69 @@
+<!-- pages/home/index.wxml -->
+<view class="container">
+  <!-- 顶部用户信息 -->
+  <view class="header">
+    <view class="user-info">
+      <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+      <view class="user-details">
+        <text class="greeting">{{greeting}}</text>
+        <text class="nickname">{{userInfo.nickName || '用户'}}</text>
+      </view>
+    </view>
+    <navigator class="settings-btn" url="/pages/settings/index">
+      <image src="/images/settings-icon.png" mode="aspectFit"></image>
+    </navigator>
+  </view>
+
+  <!-- 标题 -->
+  <view class="title-section">
+    <text class="page-title">今日饮水</text>
+  </view>
+
+  <!-- 环形进度条 -->
+  <view class="progress-section">
+    <view class="progress-container">
+      <canvas class="progress-circle" canvas-id="progressCircle"></canvas>
+      <view class="progress-text">
+        <text class="current-cups">{{currentCups}}</text>
+        <text class="goal-cups">/{{dailyGoal}}</text>
+        <text class="unit">杯</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提醒信息 -->
+  <view class="reminder-section">
+    <view class="reminder-pill">
+      <image class="reminder-icon" src="/images/schedule-icon.png" mode="aspectFit"></image>
+      <text class="reminder-text">下一次提醒: {{nextReminder}}</text>
+    </view>
+  </view>
+
+  <!-- 打卡按钮 -->
+  <view class="action-section">
+    <button class="add-cup-btn" bindtap="addCup" bindlongtap="undoCup">
+      <view class="btn-content">
+        <view class="add-icon">+</view>
+        <text class="btn-text">添加一杯水</text>
+      </view>
+    </button>
+  </view>
+
+  <!-- 近期历史 -->
+  <view class="history-section">
+    <view class="section-header">
+      <text class="section-title">近期历史</text>
+      <navigator class="view-all-btn" url="/pages/stats/index">查看全部</navigator>
+    </view>
+    <view class="history-grid">
+      <view class="history-item" wx:for="{{recentHistory}}" wx:key="date">
+        <text class="history-date">{{item.date}}</text>
+        <text class="history-cups">{{item.cups}}</text>
+        <view class="history-status {{item.status}}">
+          <image src="{{item.statusIcon}}" mode="aspectFit"></image>
+          <text>{{item.statusText}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

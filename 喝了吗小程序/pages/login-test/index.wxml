@@ -1,0 +1,26 @@
+<!-- pages/login-test/index.wxml -->
+<view class="container">
+  <view class="header">测试登录页面</view>
+  
+  <view class="section">
+    <text class="title">基本信息</text>
+    <text class="info">这是用于测试登录功能的简化页面</text>
+  </view>
+
+  <view class="section">
+    <button class="test-btn" bindtap="onTestClick">
+      测试点击功能
+    </button>
+  </view>
+
+  <view class="section">
+    <button class="login-btn" bindtap="onLoginTap">
+      微信一键登录
+    </button>
+  </view>
+
+  <view class="section">
+    <text class="info">点击次数: {{clickCount}}</text>
+    <text class="info" wx:if="{{userInfo}}">用户名: {{userInfo.nickName}}</text>
+  </view>
+</view>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink Yet - Statistics</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2632",
+                        "text-main-light": "#0d141b",
+                        "text-main-dark": "#e2e8f0",
+                        "text-sub-light": "#4c739a",
+                        "text-sub-dark": "#94a3b8",
+                        "divider-light": "#e7edf3",
+                        "divider-dark": "#2d3748",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-light dark:text-text-main-dark min-h-screen flex flex-col overflow-x-hidden antialiased transition-colors duration-200">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between p-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-transparent dark:border-divider-dark transition-colors">
+<div class="flex items-center gap-3">
+<!-- User Avatar (WeChat context) -->
+<div class="relative group cursor-pointer">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 ring-2 ring-primary/20 dark:ring-primary/40 transition-all hover:ring-primary" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDD1vLHotbcORnf-za9tHIbRNjjH7RoQmRnru8u5mWo5iLaCSIuSSlA5wwfeViejuqUFPrGJ_MKa1WLtXBtJMpTmV027tVwR3ytHV8VtQhcjZDnuDdyZdvSeYqEJjwtUeEzRB6gjOpTKt36WtKc7PZrEerKNBbuel12uFokW2YGC7zfYsFw2D1BE8Vxb9jbpQQvbSpwBAjl0Iy44HRWVd72dZFhpM7wecBBCGyAVMzMa7z2wwHTA-tgGQ_KsOmJaPnaMro-DlyYLpQG");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-tight flex-1 text-center pr-10">Statistics</h1>
+<button aria-label="Share stats" class="flex items-center justify-center size-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-primary">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col gap-6 px-4 pb-8 pt-2">
+<!-- Summary Card -->
+<section class="bg-primary rounded-2xl p-6 text-white shadow-lg shadow-primary/20 relative overflow-hidden">
+<!-- decorative circles -->
+<div class="absolute -right-8 -top-8 size-32 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-8 -bottom-8 size-24 bg-white/10 rounded-full blur-xl"></div>
+<div class="relative z-10 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-white/80 text-sm font-medium mb-1">Weekly Average</p>
+<h2 class="text-3xl font-bold tracking-tight">6.5 Cups</h2>
+</div>
+<div class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                        +12%
+                    </div>
+</div>
+<div class="w-full bg-black/20 rounded-full h-2 mb-2">
+<div class="bg-white h-2 rounded-full" style="width: 81%"></div>
+</div>
+<p class="text-xs text-white/70 text-right">81% of weekly goal</p>
+</div>
+</section>
+<!-- Charts Section -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-divider-light dark:border-divider-dark">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold tracking-tight">Hydration History</h3>
+<div class="flex items-center gap-1 bg-background-light dark:bg-background-dark rounded-lg p-1">
+<button class="bg-white dark:bg-gray-700 shadow-sm px-3 py-1 rounded-md text-xs font-bold text-primary">Week</button>
+<button class="px-3 py-1 rounded-md text-xs font-medium text-text-sub-light dark:text-text-sub-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">Month</button>
+</div>
+</div>
+<!-- Bar Chart Container -->
+<div class="relative h-[220px] w-full mt-2">
+<!-- Goal Line -->
+<div class="absolute top-[20%] left-0 w-full border-t border-dashed border-primary/40 dark:border-primary/60 z-0 flex items-center">
+<span class="bg-surface-light dark:bg-surface-dark text-[10px] text-primary px-1 -mt-5 ml-auto font-bold">Goal: 8 cups</span>
+</div>
+<div class="grid grid-cols-7 gap-2 h-full items-end pb-6 z-10 relative">
+<!-- Day 1: Mon (2 cups) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary/20 dark:bg-primary/10 rounded-t-full transition-all group-hover:bg-primary/40 relative h-[25%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">2 cups</div>
+</div>
+<span class="text-[11px] font-bold text-text-sub-light dark:text-text-sub-dark">M</span>
+</div>
+<!-- Day 2: Tue (5 cups) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary/40 dark:bg-primary/30 rounded-t-full transition-all group-hover:bg-primary/60 relative h-[62%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">5 cups</div>
+</div>
+<span class="text-[11px] font-bold text-text-sub-light dark:text-text-sub-dark">T</span>
+</div>
+<!-- Day 3: Wed (8 cups - Goal Met) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary rounded-t-full relative h-[100%] shadow-[0_0_10px_rgba(43,140,238,0.4)]">
+<div class="absolute -top-1 right-0 left-0 flex justify-center">
+<span class="material-symbols-outlined text-[10px] text-primary -mt-4 animate-bounce">star</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">8 cups</div>
+</div>
+<span class="text-[11px] font-bold text-primary">W</span>
+</div>
+<!-- Day 4: Thu (8 cups - Goal Met) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary rounded-t-full relative h-[100%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">8 cups</div>
+</div>
+<span class="text-[11px] font-bold text-text-sub-light dark:text-text-sub-dark">T</span>
+</div>
+<!-- Day 5: Fri (6 cups) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary/60 dark:bg-primary/50 rounded-t-full transition-all group-hover:bg-primary/80 relative h-[75%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">6 cups</div>
+</div>
+<span class="text-[11px] font-bold text-text-sub-light dark:text-text-sub-dark">F</span>
+</div>
+<!-- Day 6: Sat (8 cups - Goal Met) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-primary rounded-t-full relative h-[100%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">8 cups</div>
+</div>
+<span class="text-[11px] font-bold text-text-sub-light dark:text-text-sub-dark">S</span>
+</div>
+<!-- Day 7: Sun (4 cups - Today) -->
+<div class="group flex flex-col items-center gap-2 h-full justify-end cursor-pointer">
+<div class="w-full max-w-[12px] sm:max-w-[20px] bg-gradient-to-t from-primary to-blue-300 dark:from-primary dark:to-blue-600 rounded-t-full relative h-[50%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main-light dark:bg-white text-white dark:text-black text-[10px] font-bold px-2 py-1 rounded shadow-md transition-opacity whitespace-nowrap z-20">4 cups</div>
+</div>
+<span class="text-[11px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded">S</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Today's Intake Section -->
+<div>
+<div class="flex items-center justify-between mb-4 px-2">
+<h3 class="text-xl font-bold tracking-tight text-text-main-light dark:text-text-main-dark">Today's Intake</h3>
+<div class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-bold">
+                    4/8 Cups
+                </div>
+</div>
+<!-- Timeline -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-divider-light dark:border-divider-dark">
+<div class="grid grid-cols-[40px_1fr] gap-x-3">
+<!-- Item 1 -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</div>
+<div class="w-[2px] bg-divider-light dark:bg-divider-dark h-full min-h-[40px] rounded-full"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<div class="flex justify-between items-center">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-bold">Morning Starter</p>
+<span class="text-xs font-semibold text-text-sub-light dark:text-text-sub-dark bg-background-light dark:bg-background-dark px-2 py-1 rounded">250ml</span>
+</div>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm font-medium mt-0.5">08:00 AM</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div class="w-[2px] bg-divider-light dark:bg-divider-dark h-full min-h-[40px] rounded-full"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<div class="flex justify-between items-center">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-bold">Hydration Break</p>
+<span class="text-xs font-semibold text-text-sub-light dark:text-text-sub-dark bg-background-light dark:bg-background-dark px-2 py-1 rounded">250ml</span>
+</div>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm font-medium mt-0.5">10:30 AM</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</div>
+<div class="w-[2px] bg-divider-light dark:bg-divider-dark h-full min-h-[40px] rounded-full"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6">
+<div class="flex justify-between items-center">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-bold">Lunch</p>
+<span class="text-xs font-semibold text-text-sub-light dark:text-text-sub-dark bg-background-light dark:bg-background-dark px-2 py-1 rounded">250ml</span>
+</div>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm font-medium mt-0.5">12:45 PM</p>
+</div>
+<!-- Item 4 (Last item, dashed line ending) -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-8 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mt-1">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+</div>
+<div class="w-[2px] border-l-2 border-dashed border-divider-light dark:border-divider-dark h-full min-h-[20px]"></div>
+</div>
+<div class="flex flex-1 flex-col pb-2">
+<div class="flex justify-between items-center">
+<p class="text-text-main-light dark:text-text-main-dark text-base font-bold">Afternoon Sip</p>
+<span class="text-xs font-semibold text-text-sub-light dark:text-text-sub-dark bg-background-light dark:bg-background-dark px-2 py-1 rounded">250ml</span>
+</div>
+<p class="text-text-sub-light dark:text-text-sub-dark text-sm font-medium mt-0.5">03:15 PM</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Placeholder for App Context) -->
+<nav class="sticky bottom-0 bg-surface-light dark:bg-surface-dark border-t border-divider-light dark:border-divider-dark px-6 py-3 flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl fill-1">bar_chart</span>
+<span class="text-[10px] font-bold">Stats</span>
+</button>
+<div class="relative -top-8 bg-primary text-white p-3 rounded-full shadow-lg shadow-primary/40 cursor-pointer hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<button class="flex flex-col items-center gap-1 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">emoji_events</span>
+<span class="text-[10px] font-medium">Badges</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-sub-light dark:text-text-sub-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+</body></html>
