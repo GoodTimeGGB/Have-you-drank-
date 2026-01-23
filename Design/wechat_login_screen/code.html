@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink Yet - WeChat Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom subtle floating animation for background bubbles */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden">
+<!-- Decorative Background Bubbles -->
+<div class="absolute top-[-10%] left-[-10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float pointer-events-none"></div>
+<div class="absolute bottom-[20%] right-[-5%] w-48 h-48 bg-primary/10 rounded-full blur-3xl animate-float-delayed pointer-events-none"></div>
+<div class="absolute top-[40%] left-[20%] w-24 h-24 bg-blue-400/5 rounded-full blur-xl pointer-events-none"></div>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col items-center justify-between w-full max-w-[480px] mx-auto p-6 relative z-10">
+<!-- Spacer for vertical balance -->
+<div class="flex-0 h-8"></div>
+<!-- Top Section: Illustration & Branding -->
+<div class="w-full flex flex-col items-center gap-6">
+<!-- Hero Illustration Container -->
+<div class="relative w-64 h-64 flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/10 rounded-full scale-90"></div>
+<!-- Image -->
+<div class="w-full h-full bg-contain bg-center bg-no-repeat relative z-10" data-alt="Illustration of a cute friendly blue water drop mascot smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBW_vtTdfmzdJuSprJUGYznyPw8bi6PIqnCKHhgY1qLlCPg3nBm0iPtFYwY2vR6FcVLS-L4GY7e2I-VG0LEeuC3vUfc9_ROML18-XyTrhHboFmvtO80VMBiay2g9WshNHZ77bJAgp1l6oNlaVzqGYRusmF-CAQPmLlceB7Fdv87LmttAafpsq73AI3wl7HkPl_kVTHslMwy7-x-T0AT2jGz2KNvcgXKK4Ln9JdYjeBnfgooQgtAl-6QJpNrfnsLIVd5atFEX2mm2zdA');">
+</div>
+</div>
+<!-- Text Group -->
+<div class="text-center space-y-2 mt-4">
+<h1 class="text-slate-900 dark:text-slate-50 tracking-tight text-[32px] font-extrabold leading-tight">
+                        Drink Yet <span class="text-primary">喝了吗</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-medium leading-normal px-4">
+                        每天8杯水，健康喝出来<br/>
+<span class="text-sm opacity-80">Track your 8 glasses a day</span>
+</p>
+</div>
+</div>
+<!-- Bottom Section: Actions & Footer -->
+<div class="w-full flex flex-col gap-6 mb-8">
+<!-- Login Button -->
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary hover:bg-blue-600 transition-all active:scale-[0.98] shadow-lg shadow-blue-500/20">
+<div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-white mr-3 text-[24px]">
+                        forum
+                    </span>
+<span class="text-white text-lg font-bold leading-normal tracking-wide">
+                        Login with WeChat
+                    </span>
+</button>
+<!-- Legal / Meta Text -->
+<div class="text-center space-y-4">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal leading-normal px-4">
+                        By logging in, you agree to our 
+                        <a class="underline hover:text-primary transition-colors" href="#">Terms of Service</a> 
+                        &amp; 
+                        <a class="underline hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,91 @@
+<!-- pages/medals/index.wxml -->
+<view class="container">
+  <!-- Top Navigation -->
+  <view class="header">
+    <view class="nav-left">
+      <button class="nav-btn" bindtap="goBack">
+        <image class="nav-icon" src="/images/back-icon.png" mode="aspectFit"></image>
+      </button>
+    </view>
+    <view class="nav-right">
+      <button class="nav-btn" bindtap="showMoreOptions">
+        <image class="nav-icon" src="/images/more-icon.png" mode="aspectFit"></image>
+      </button>
+    </view>
+  </view>
+  
+  <!-- Header Title -->
+  <view class="title-section">
+    <text class="main-title">Your Trophy Case</text>
+    <text class="subtitle">Keep drinking to unlock them all!</text>
+  </view>
+  
+  <!-- Progress Summary Card -->
+  <view class="progress-card">
+    <view class="progress-header">
+      <view class="left-section">
+        <text class="progress-label">Total Progress</text>
+        <text class="progress-value">{{unlockedCount}}/{{totalMedals}} Unlocked</text>
+      </view>
+      <view class="right-section">
+        <image class="progress-icon" src="/images/check-icon.png" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="progress-bar-container">
+      <view class="progress-bg"></view>
+      <view class="progress-fill" style="width: {{progressPercentage}}%;"></view>
+    </view>
+  </view>
+  
+  <!-- Latest Achievement (Featured) -->
+  <view class="featured-section">
+    <text class="section-title">Latest Achievement</text>
+    <view class="featured-medal" wx:if="{{featuredMedal}}">
+      <!-- Decorative background glow -->
+      <view class="medal-glow"></view>
+      
+      <view class="medal-content">
+        <view class="medal-icon-container">
+          <image class="medal-icon" src="{{featuredMedal.image}}" mode="aspectFit"></image>
+          <view class="medal-badge">
+            <image class="badge-icon" src="/images/check-icon.png" mode="aspectFit"></image>
+          </view>
+        </view>
+        
+        <view class="medal-info">
+          <text class="medal-name">{{featuredMedal.name}}</text>
+          <text class="medal-desc">{{featuredMedal.description}}</text>
+          <text class="medal-date">{{featuredMedal.date}}</text>
+        </view>
+        
+        <button class="share-btn" bindtap="shareMedal">
+          <image class="share-icon" src="/images/share-icon.png" mode="aspectFit"></image>
+          <text class="share-text">Share to WeChat</text>
+        </button>
+      </view>
+    </view>
+  </view>
+  
+  <!-- All Medals Grid -->
+  <view class="medals-grid-section">
+    <text class="section-title">All Medals</text>
+    <view class="medals-grid">
+      <view class="medal-item" wx:for="{{medals}}" wx:key="id" bindtap="showMedalDetail" data-id="{{item.id}}">
+        <view class="medal-item-container {{item.unlocked ? 'unlocked' : 'locked'}}">
+          <view class="medal-circle">
+            <image class="medal-item-icon" src="{{item.image}}" mode="aspectFit"></image>
+            <view class="medal-lock" wx:if="{{!item.unlocked}}">
+              <image class="lock-icon" src="/images/lock-icon.png" mode="aspectFit"></image>
+            </view>
+          </view>
+          <view class="medal-details">
+            <text class="medal-item-name">{{item.name}}</text>
+            <text class="medal-item-desc">{{item.description}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+</view>

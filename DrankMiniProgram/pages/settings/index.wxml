@@ -1,0 +1,165 @@
+<!-- pages/settings/index.wxml -->
+<view class="container">
+  <!-- Top App Bar -->
+  <view class="header">
+    <navigator class="back-btn" url="{{firstLogin ? '/pages/home/index' : '/pages/home/index'}}">
+      <image class="back-icon" src="/images/back-icon.png" mode="aspectFit"></image>
+      <text class="back-text">Back</text>
+    </navigator>
+    <text class="page-title">Reminder Settings</text>
+    <button class="save-btn" bindtap="saveSettings">Save</button>
+  </view>
+  
+  <!-- Main Content -->
+  <view class="main-content">
+    <!-- Section: Personal Information -->
+    <view class="section">
+      <text class="section-title">Personal Information</text>
+      <view class="section-content">
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <image class="setting-icon" src="/images/user-icon.png" mode="aspectFit"></image>
+              <text class="setting-name">Avatar</text>
+            </view>
+            <view class="avatar-container">
+              <image class="avatar-image" src="{{userInfo && userInfo.avatarUrl ? userInfo.avatarUrl : '/images/default-avatar.png'}}" mode="aspectFill"></image>
+              <button class="avatar-btn" bindtap="chooseAvatar">Change</button>
+            </view>
+          </view>
+        </view>
+        
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <image class="setting-icon" src="/images/name-icon.png" mode="aspectFit"></image>
+              <text class="setting-name">Nickname</text>
+            </view>
+            <view class="nickname-container">
+              <text class="nickname-text">{{userInfo && userInfo.nickName ? userInfo.nickName : '未设置'}}</text>
+              <button class="nickname-btn" bindtap="updateNickname">Change</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Section: Automation -->
+    <view class="section">
+      <text class="section-title">Automation</text>
+      <view class="section-content">
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <image class="setting-icon" src="/images/check-icon.png" mode="aspectFit"></image>
+              <text class="setting-name">Smart Reminders</text>
+            </view>
+            <switch class="setting-switch" checked="{{smartRemindersEnabled}}" bindchange="onSmartRemindersChange" />
+          </view>
+          <text class="setting-desc">Automatically adjust schedule based on your activity levels.</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Section: Goals & Frequency -->
+    <view class="section">
+      <text class="section-title">Goals & Frequency</text>
+      <view class="section-content">
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <text class="setting-name">Daily Goal</text>
+              <text class="setting-desc-small">Cups (250ml)</text>
+            </view>
+            <view class="goal-controls">
+              <button class="goal-btn" bindtap="decreaseGoal">-</button>
+              <text class="goal-value">{{dailyGoal}}</text>
+              <button class="goal-btn" bindtap="increaseGoal">+</button>
+            </view>
+          </view>
+        </view>
+        
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <text class="setting-name">Reminder Interval</text>
+            </view>
+            <picker class="setting-picker" range="{{intervalOptions}}" bindchange="onIntervalChange" value="{{selectedIntervalIndex}}">
+              <view class="picker-display">
+                <text class="picker-text">{{intervalOptions[selectedIntervalIndex]}}</text>
+                <image class="picker-icon" src="/images/arrow-right-icon.png" mode="aspectFit"></image>
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Section: Quiet Time -->
+    <view class="section">
+      <text class="section-title">Do Not Disturb</text>
+      <view class="section-content">
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <text class="setting-name">Silent Hours</text>
+              <text class="setting-desc-small">Mute reminders while sleeping.</text>
+            </view>
+            <switch class="setting-switch" checked="{{quietModeEnabled}}" bindchange="onQuietModeChange" />
+          </view>
+          
+          <view class="quiet-hours" wx:if="{{quietModeEnabled}}">
+            <view class="quiet-time">
+              <text class="time-label">Start Time</text>
+              <picker class="time-picker" mode="time" value="{{quietStartTime}}" bindchange="onStartTimeChange">
+                <view class="time-display">
+                  <text class="time-text">{{quietStartTime}}</text>
+                </view>
+              </picker>
+            </view>
+            <view class="quiet-time">
+              <text class="time-label">End Time</text>
+              <picker class="time-picker" mode="time" value="{{quietEndTime}}" bindchange="onEndTimeChange">
+                <view class="time-display">
+                  <text class="time-text">{{quietEndTime}}</text>
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Section: Preferences -->
+    <view class="section">
+      <text class="section-title">Sound & Haptics</text>
+      <view class="section-content">
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <text class="setting-name">Notification Sound</text>
+            </view>
+            <picker class="setting-picker" range="{{soundOptions}}" bindchange="onSoundChange" value="{{selectedSoundIndex}}">
+              <view class="picker-display">
+                <text class="picker-text">{{soundOptions[selectedSoundIndex]}}</text>
+                <image class="picker-icon" src="/images/arrow-right-icon.png" mode="aspectFit"></image>
+              </view>
+            </picker>
+          </view>
+        </view>
+        
+        <view class="setting-item">
+          <view class="setting-label">
+            <view class="label-left">
+              <text class="setting-name">Haptic Feedback</text>
+            </view>
+            <switch class="setting-switch" checked="{{hapticEnabled}}" bindchange="onHapticChange" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- Bottom visual element to simulate content end -->
+  <view class="content-end"></view>
+</view>

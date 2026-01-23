@@ -1,0 +1,69 @@
+<!-- pages/terms/index.wxml -->
+<view class="container">
+  <view class="header">
+    <navigator class="back-btn" url="/pages/login/index">
+      <image src="/images/back-icon.png" mode="aspectFit"></image>
+      <text>返回</text>
+    </navigator>
+    <text class="page-title">服务条款</text>
+  </view>
+
+  <view class="content">
+    <view class="section">
+      <text class="section-title">欢迎使用"喝了吗"饮水提醒小程序</text>
+      <text class="section-content">
+        感谢您使用"喝了吗"饮水提醒小程序（以下简称"本小程序"）。在使用本小程序前，请您仔细阅读以下服务条款。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">一、服务说明</text>
+      <text class="section-content">
+        1. 本小程序是一款免费的饮水提醒工具，旨在帮助用户养成良好的饮水习惯。
+        2. 用户可以通过本小程序设置每日饮水目标、记录饮水情况、查看饮水统计等功能。
+        3. 本小程序提供的所有功能仅供参考，不作为医疗建议。如有健康问题，请咨询专业医生。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">二、用户权利与义务</text>
+      <text class="section-content">
+        1. 用户有权使用本小程序的所有功能，但需遵守相关法律法规和本条款。
+        2. 用户需对自己的账户安全负责，禁止将账户转借他人使用。
+        3. 用户应如实填写个人信息，禁止提交虚假信息。
+        4. 用户禁止使用本小程序进行任何违法违规活动。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">三、数据安全</text>
+      <text class="section-content">
+        1. 本小程序会收集用户的饮水记录和个人信息，但只会用于提供服务。
+        2. 用户的个人信息会进行加密处理，保障数据安全。
+        3. 用户有权随时删除自己的账户和数据。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">四、免责声明</text>
+      <text class="section-content">
+        1. 本小程序提供的服务"按原样"提供，不保证其完整性、准确性或可靠性。
+        2. 对于因使用本小程序而导致的任何直接或间接损失，本小程序不承担责任。
+        3. 本小程序有权随时修改服务条款，用户需定期查看。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">五、联系我们</text>
+      <text class="section-content">
+        如果您有任何问题或建议，可以通过以下方式联系我们：
+        - 在小程序内发送反馈
+        - 发送邮件到：support@example.com
+      </text>
+    </view>
+
+    <view class="last-updated">
+      <text>最后更新日期：2024年1月</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="400" fill="#2b8cee"/>
+  <circle cx="250" cy="150" r="80" fill="#ffffff"/>
+  <circle cx="250" cy="150" r="60" fill="#2b8cee"/>
+  <path d="M250 120 C250 120, 270 140, 250 170 C230 140, 250 120, 250 120" fill="none" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="250" cy="160" r="10" fill="white"/>
+  <text x="250" y="280" font-size="36" fill="white" text-anchor="middle" font-weight="bold">喝了吗</text>
+  <text x="250" y="320" font-size="20" fill="rgba(255,255,255,0.8)" text-anchor="middle">每天8杯水，健康生活每一天</text>
+</svg>

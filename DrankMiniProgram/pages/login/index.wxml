@@ -1,0 +1,51 @@
+<!-- pages/login/index.wxml -->
+<view class="container">
+  <!-- Decorative Background Bubbles -->
+  <view class="bg-bubble bubble-1"></view>
+  <view class="bg-bubble bubble-2"></view>
+  <view class="bg-bubble bubble-3"></view>
+  
+  <!-- Main Content Container -->
+  <view class="main-content">
+    <!-- Spacer for vertical balance -->
+    <view class="spacer"></view>
+    
+    <!-- Top Section: Illustration & Branding -->
+    <view class="top-section">
+      <!-- Hero Illustration Container -->
+      <view class="hero-container">
+        <view class="hero-bg"></view>
+        <image class="hero-image" src="/images/logo.png" mode="aspectFit"></image>
+      </view>
+      
+      <!-- Text Group -->
+      <view class="text-group">
+        <view class="title">
+          <text class="english-title">Drink Yet</text>
+          <text class="chinese-title">喝了吗</text>
+        </view>
+        <text class="slogan">每天8杯水，健康喝出来</text>
+        <text class="subtitle">Track your 8 glasses a day</text>
+      </view>
+    </view>
+    
+    <!-- Bottom Section: Actions & Footer -->
+    <view class="bottom-section">
+      <!-- Login Button -->
+      <button class="login-btn" bindtap="onLoginTap" hover-class="login-btn-hover">
+        <view class="btn-content">
+          <image class="wechat-icon" src="/images/wechat-icon.png" mode="aspectFit"></image>
+          <text class="btn-text">Login with WeChat</text>
+        </view>
+      </button>
+      
+      <!-- Legal / Meta Text -->
+      <view class="legal-section">
+        <text class="legal-text">By logging in, you agree to our </text>
+        <navigator class="legal-link" url="/pages/terms/index">Terms of Service</navigator>
+        <text class="legal-text"> & </text>
+        <navigator class="legal-link" url="/pages/privacy/index">Privacy Policy</navigator>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/home/index",
+    "pages/stats/index",
+    "pages/medals/index",
+    "pages/settings/index",
+    "pages/terms/index",
+    "pages/privacy/index",
+    "pages/feedback/index",
+    "pages/about/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b8cee",
+    "navigationBarTitleText": "喝了吗",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f6f7f8"
+  },
+  "tabBar": {
+    "color": "#637588",
+    "selectedColor": "#2b8cee",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "今日",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png"
+      },
+      {
+        "pagePath": "pages/stats/index",
+        "text": "统计",
+        "iconPath": "images/stats.png",
+        "selectedIconPath": "images/stats-active.png"
+      },
+      {
+        "pagePath": "pages/medals/index",
+        "text": "成就",
+        "iconPath": "images/medals.png",
+        "selectedIconPath": "images/medals-active.png"
+      },
+      {
+        "pagePath": "pages/settings/index",
+        "text": "设置",
+        "iconPath": "images/settings.png",
+        "selectedIconPath": "images/settings-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

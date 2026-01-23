@@ -1,0 +1,68 @@
+/* pages/privacy/index.wxss */
+.container {
+  padding: 0;
+  background-color: #f6f7f8;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background-color: rgba(246, 247, 248, 0.9);
+  backdrop-filter: blur(10rpx);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.back-btn image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.content {
+  padding: 40rpx 30rpx;
+}
+
+.section {
+  margin-bottom: 50rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.section-content {
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 1.8;
+  display: block;
+}
+
+.last-updated {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 60rpx;
+}

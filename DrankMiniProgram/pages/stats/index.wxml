@@ -1,0 +1,109 @@
+<!-- pages/stats/index.wxml -->
+<view class="container">
+  <!-- Top App Bar -->
+  <view class="header">
+    <view class="user-info">
+      <view class="avatar-container">
+        <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+        <view class="online-status"></view>
+      </view>
+    </view>
+    <text class="page-title">Statistics</text>
+    <button class="share-btn" bindtap="shareStats">
+      <image class="share-icon" src="/images/share-icon.png" mode="aspectFit"></image>
+    </button>
+  </view>
+  
+  <!-- Main Content -->
+  <view class="main-content">
+    <!-- Summary Card -->
+    <view class="summary-card">
+      <!-- decorative circles -->
+      <view class="decorative-circle circle-1"></view>
+      <view class="decorative-circle circle-2"></view>
+      
+      <view class="summary-content">
+        <view class="summary-header">
+          <view class="left-section">
+            <text class="summary-label">Weekly Average</text>
+            <text class="summary-value">{{weeklyAverage}} Cups</text>
+          </view>
+          <view class="right-section">
+            <view class="trend-pill">
+              <image class="trend-icon" src="/images/check-icon.png" mode="aspectFit"></image>
+              <text class="trend-text">+12%</text>
+            </view>
+          </view>
+        </view>
+        
+        <view class="progress-bar">
+          <view class="progress-bg"></view>
+          <view class="progress-fill" style="width: {{completionRate}}%;"></view>
+        </view>
+        
+        <text class="progress-text">{{completionRate}}% of weekly goal</text>
+      </view>
+    </view>
+    
+    <!-- Charts Section -->
+    <view class="charts-section">
+      <view class="charts-header">
+        <text class="charts-title">Hydration History</text>
+        <view class="period-toggle">
+          <button class="toggle-btn {{activePeriod === 'week' ? 'active' : ''}}" bindtap="switchPeriod" data-period="week">Week</button>
+          <button class="toggle-btn {{activePeriod === 'month' ? 'active' : ''}}" bindtap="switchPeriod" data-period="month">Month</button>
+        </view>
+      </view>
+      
+      <!-- Bar Chart Container -->
+      <view class="chart-container">
+        <!-- Goal Line -->
+        <view class="goal-line">
+          <text class="goal-label">Goal: 8 cups</text>
+        </view>
+        
+        <!-- Chart Grid -->
+        <view class="chart-grid">
+          <view class="chart-item" wx:for="{{weeklyData}}" wx:key="index">
+            <view class="bar-container">
+              <view class="bar" style="height: {{item.height}}%;" data-index="{{index}}">
+                <view class="bar-glow" style="height: {{item.height}}%;"></view>
+                <view class="bar-label">{{item.cups}} cups</view>
+              </view>
+              <text class="day-label">{{item.day}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <!-- Today's Intake Section -->
+    <view class="today-section">
+      <view class="today-header">
+        <text class="today-title">Today's Intake</text>
+        <view class="today-progress">
+          <text class="progress-text">{{todayCups}}/8 Cups</text>
+        </view>
+      </view>
+      
+      <!-- Timeline -->
+      <view class="timeline-container">
+        <view class="timeline-item" wx:for="{{todayTimeline}}" wx:key="index">
+          <view class="timeline-dot">
+            <image class="timeline-icon" src="{{item.icon}}" mode="aspectFit"></image>
+          </view>
+          <view class="timeline-content">
+            <view class="timeline-header">
+              <text class="timeline-title">{{item.title}}</text>
+              <text class="timeline-amount">250ml</text>
+            </view>
+            <text class="timeline-time">{{item.time}}</text>
+          </view>
+          <view class="timeline-line" wx:if="{{index < todayTimeline.length - 1}}"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+</view>

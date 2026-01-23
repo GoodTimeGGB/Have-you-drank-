@@ -1,0 +1,50 @@
+<!-- pages/feedback/index.wxml -->
+<view class="container">
+  <view class="header">
+    <navigator class="back-btn" url="/pages/settings/index">
+      <image src="/images/back-icon.png" mode="aspectFit"></image>
+      <text>返回</text>
+    </navigator>
+    <text class="page-title">意见反馈</text>
+  </view>
+
+  <view class="content">
+    <view class="feedback-form">
+      <view class="form-section">
+        <text class="section-title">反馈类型</text>
+        <view class="radio-group">
+          <label class="radio-item">
+            <radio value="bug" checked="{{selectedType === 'bug'}}"></radio>
+            <text>程序bug</text>
+          </label>
+          <label class="radio-item">
+            <radio value="feature" checked="{{selectedType === 'feature'}}"></radio>
+            <text>功能建议</text>
+          </label>
+          <label class="radio-item">
+            <radio value="other" checked="{{selectedType === 'other'}}"></radio>
+            <text>其他问题</text>
+          </label>
+        </view>
+      </view>
+
+      <view class="form-section">
+        <text class="section-title">问题描述</text>
+        <textarea class="feedback-input" placeholder="请详细描述您遇到的问题或建议..." value="{{feedbackContent}}" bindinput="onInputChange"></textarea>
+      </view>
+
+      <view class="form-section">
+        <text class="section-title">联系方式（可选）</text>
+        <input class="contact-input" placeholder="请输入您的微信号或邮箱" value="{{contactInfo}}" bindinput="onContactChange"></input>
+      </view>
+
+      <button class="submit-btn" bindtap="submitFeedback" disabled="{{!canSubmit}}">
+        {{submitting ? '提交中...' : '提交反馈'}}
+      </button>
+
+      <view class="tips">
+        <text>您的反馈对我们很重要，我们会尽快处理。</text>
+      </view>
+    </view>
+  </view>
+</view>

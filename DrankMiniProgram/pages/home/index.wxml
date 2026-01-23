@@ -1,0 +1,85 @@
+<!-- pages/home/index.wxml -->
+<view class="container">
+  <!-- TopAppBar -->
+  <view class="header">
+    <view class="user-info">
+      <view class="avatar-container">
+        <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+        <view class="online-status"></view>
+      </view>
+      <view class="user-details">
+        <text class="greeting">{{greeting}}</text>
+        <text class="nickname">{{userInfo.nickName || '用户'}}</text>
+      </view>
+    </view>
+    <navigator class="settings-btn" url="/pages/settings/index">
+      <image class="settings-icon" src="/images/settings-icon.png" mode="aspectFit"></image>
+    </navigator>
+  </view>
+  
+  <!-- Main Content -->
+  <view class="main-content">
+    <!-- Title -->
+    <text class="page-title">Today's Hydration</text>
+    
+    <!-- Circular Progress Visualization -->
+    <view class="progress-section">
+      <view class="progress-container">
+        <!-- Decorative Glow -->
+        <view class="progress-glow"></view>
+        <!-- SVG Circle -->
+        <view class="progress-circle">
+          <canvas class="circle-canvas" canvas-id="progressCircle"></canvas>
+        </view>
+        <!-- Center Content -->
+        <view class="progress-text">
+          <view class="cups-container">
+            <text class="current-cups">{{currentCups}}</text>
+            <text class="goal-cups">/{{dailyGoal}}</text>
+          </view>
+          <text class="unit">Cups</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- MetaText / Status Pill -->
+    <view class="reminder-section">
+      <view class="reminder-pill">
+        <image class="reminder-icon" src="/images/schedule-icon.png" mode="aspectFit"></image>
+        <text class="reminder-text">Next reminder in {{nextReminder}} mins</text>
+      </view>
+    </view>
+    
+    <!-- Primary Action Button (FAB Style) -->
+    <view class="action-section">
+      <button class="add-cup-btn" bindtap="addCup" bindlongtap="undoCup" hover-class="add-cup-btn-hover">
+        <view class="btn-content">
+          <view class="add-icon-container">
+            <view class="add-icon">+</view>
+          </view>
+          <text class="btn-text">Add a Cup</text>
+        </view>
+      </button>
+    </view>
+    
+    <!-- Stats Header -->
+    <view class="stats-header">
+      <text class="section-title">Recent History</text>
+      <navigator class="view-all-btn" url="/pages/stats/index">View All</navigator>
+    </view>
+    
+    <!-- Stats Cards -->
+    <view class="history-grid">
+      <view class="history-item" wx:for="{{recentHistory}}" wx:key="date">
+        <text class="history-date">{{item.date}}</text>
+        <text class="history-cups">{{item.cups}}</text>
+        <view class="history-status {{item.status}}">
+          <image class="status-icon" src="{{item.statusIcon}}" mode="aspectFit"></image>
+          <text class="status-text">{{item.statusText}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+</view>

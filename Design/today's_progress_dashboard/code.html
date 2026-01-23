@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink Yet - Today's Progress</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "primary-dark": "#1a6bb5",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between p-6 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="relative group cursor-pointer">
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-white dark:border-slate-700 shadow-sm" data-alt="User WeChat profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjU82SyjIcDMm_RhV1dkf811tATtqzKY4vtdcdiC-qxRGE4E7M4eqGfy8hFrrZvu9KjcnnNK1mqUBTMZvx0bBohs90hcr4FEC2WCiEFo_31ajjqV7D3ZjrqDLODqQ2AU-tQ09oqR-riTfey3-b_0VCf6MxjyrpS3Dz4s4T1GhrEyBDalgStaHIw6Qz7BfVzdSHT3_0NQH_DgXamKPrJVEan8nS-sCWOLV0dtWJu4ILYuveYGjqzRY_P-B99Gh_Wna6mPK844g_RzLO");'></div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+<div>
+<h2 class="text-sm text-slate-500 dark:text-slate-400 font-medium leading-none">Good Morning</h2>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Alex</p>
+</div>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center px-6 pb-24">
+<!-- Spacer -->
+<div class="h-8"></div>
+<!-- Title -->
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">Today's Hydration</h1>
+<!-- Circular Progress Visualization -->
+<div class="relative size-64 mb-10">
+<!-- Decorative Glow -->
+<div class="absolute inset-0 bg-primary/20 dark:bg-primary/10 rounded-full blur-3xl transform scale-90"></div>
+<!-- SVG Circle -->
+<svg class="size-full transform -rotate-90 drop-shadow-lg" viewbox="0 0 100 100">
+<!-- Background Circle -->
+<circle class="text-slate-200 dark:text-slate-800" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress Circle (3/8 = 37.5%) -->
+<!-- Circumference = 2 * pi * 42 ≈ 263.89 -->
+<!-- Dashoffset = 263.89 * (1 - 0.375) ≈ 164.93 -->
+<circle class="text-primary transition-all duration-1000 ease-out" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-dasharray="263.89" stroke-dashoffset="164.93" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<!-- Center Content -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<div class="flex items-baseline gap-1">
+<span class="text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">3</span>
+<span class="text-2xl font-bold text-slate-400 dark:text-slate-500">/8</span>
+</div>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1 uppercase tracking-wider">Cups</span>
+</div>
+</div>
+<!-- MetaText / Status Pill -->
+<div class="flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-8 animate-pulse">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<p class="text-primary text-sm font-semibold">Next reminder in 45 mins</p>
+</div>
+<!-- Primary Action Button (FAB Style) -->
+<button class="group w-full max-w-[280px] h-16 bg-primary hover:bg-primary-dark active:scale-95 transition-all duration-200 rounded-2xl shadow-lg shadow-primary/30 flex items-center justify-center gap-3 text-white mb-10">
+<div class="bg-white/20 p-1 rounded-full group-hover:rotate-90 transition-transform duration-300">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</div>
+<span class="text-lg font-bold tracking-wide">Add a Cup</span>
+</button>
+<!-- Stats Header -->
+<div class="w-full flex justify-between items-end mb-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Recent History</h3>
+<button class="text-primary text-sm font-bold hover:underline">View All</button>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-3 gap-4 w-full">
+<!-- Mon -->
+<div class="flex flex-col items-center gap-2 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-800/50">
+<span class="text-slate-400 text-xs font-semibold uppercase">Mon</span>
+<span class="text-slate-900 dark:text-white text-xl font-bold">6</span>
+<div class="flex items-center text-emerald-500 text-xs font-bold bg-emerald-50 dark:bg-emerald-500/10 px-1.5 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[12px] mr-0.5">trending_up</span>
+                        Ok
+                    </div>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center gap-2 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark shadow-md border border-primary/20 ring-1 ring-primary/10 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<span class="text-slate-400 text-xs font-semibold uppercase">Tue</span>
+<span class="text-slate-900 dark:text-white text-xl font-bold">8</span>
+<div class="flex items-center text-primary text-xs font-bold bg-blue-50 dark:bg-primary/20 px-1.5 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[12px] mr-0.5">check_circle</span>
+                        Goal
+                    </div>
+</div>
+<!-- Wed -->
+<div class="flex flex-col items-center gap-2 p-4 rounded-2xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-800/50">
+<span class="text-slate-400 text-xs font-semibold uppercase">Wed</span>
+<span class="text-slate-900 dark:text-white text-xl font-bold">5</span>
+<div class="flex items-center text-orange-500 text-xs font-bold bg-orange-50 dark:bg-orange-500/10 px-1.5 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[12px] mr-0.5">trending_down</span>
+                        Low
+                    </div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full max-w-md bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe pt-2 px-6 shadow-2xl z-40">
+<div class="flex justify-between items-center h-16">
+<button class="flex flex-col items-center gap-1 text-primary w-16">
+<span class="material-symbols-outlined filled">water_drop</span>
+<span class="text-[10px] font-bold">Today</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 w-16 transition-colors">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 w-16 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

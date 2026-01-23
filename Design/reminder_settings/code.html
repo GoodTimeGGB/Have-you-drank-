@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink Yet - Reminder Settings</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b8cee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e2936",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 h-14">
+<button class="flex items-center justify-center p-2 -ml-2 text-primary hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span>
+<span class="text-base font-medium ml-1 hidden sm:block">Back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight text-slate-900 dark:text-white">Reminder Settings</h1>
+<button class="text-primary font-bold text-base px-2 py-1 hover:bg-primary/10 rounded-lg transition-colors">
+                    Save
+                </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 p-4 flex flex-col gap-6">
+<!-- Section: Automation -->
+<section>
+<h3 class="px-2 pb-2 text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Automation</h3>
+<div class="overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-700">
+<!-- Smart Reminders Item -->
+<div class="flex items-center justify-between p-4 gap-4">
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<p class="text-base font-semibold text-slate-900 dark:text-white">Smart Reminders</p>
+</div>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400 leading-normal">
+                                Automatically adjust schedule based on your activity levels.
+                            </p>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Goals & Frequency -->
+<section>
+<h3 class="px-2 pb-2 text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Goals &amp; Frequency</h3>
+<div class="overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-700 divide-y divide-slate-100 dark:divide-slate-700">
+<!-- Daily Goal Item -->
+<div class="flex items-center justify-between p-4 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex flex-col">
+<p class="text-base font-medium text-slate-900 dark:text-white">Daily Goal</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Cups (250ml)</p>
+</div>
+<div class="shrink-0">
+<div class="flex items-center gap-3 bg-slate-100 dark:bg-slate-900 rounded-lg p-1">
+<button class="flex h-8 w-8 items-center justify-center rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm hover:text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-6 text-center text-lg font-bold text-slate-900 dark:text-white font-display">8</span>
+<button class="flex h-8 w-8 items-center justify-center rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-sm hover:text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Reminder Interval Item -->
+<button class="w-full flex items-center justify-between p-4 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors text-left">
+<p class="text-base font-medium text-slate-900 dark:text-white flex-1">Reminder Interval</p>
+<div class="flex items-center gap-2">
+<span class="text-base text-slate-500 dark:text-slate-400">Every 1 Hour</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-[20px]">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Section: Quiet Time -->
+<section>
+<h3 class="px-2 pb-2 text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Do Not Disturb</h3>
+<div class="overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-700 divide-y divide-slate-100 dark:divide-slate-700">
+<!-- Silent Hours Toggle -->
+<div class="flex items-center justify-between p-4 gap-4">
+<div class="flex flex-col flex-1">
+<p class="text-base font-medium text-slate-900 dark:text-white">Silent Hours</p>
+<p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-1">Mute reminders while sleeping.</p>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Time Range Container -->
+<div class="grid grid-cols-2 divide-x divide-slate-100 dark:divide-slate-700">
+<!-- Start Time -->
+<button class="flex flex-col items-center justify-center p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<span class="text-xs text-slate-500 dark:text-slate-400 mb-1">Start Time</span>
+<span class="text-xl font-bold text-primary group-hover:scale-105 transition-transform">23:00</span>
+</button>
+<!-- End Time -->
+<button class="flex flex-col items-center justify-center p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<span class="text-xs text-slate-500 dark:text-slate-400 mb-1">End Time</span>
+<span class="text-xl font-bold text-primary group-hover:scale-105 transition-transform">07:00</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: Preferences -->
+<section class="pb-8">
+<h3 class="px-2 pb-2 text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Sound &amp; Haptics</h3>
+<div class="overflow-hidden rounded-xl bg-surface-light dark:bg-surface-dark shadow-sm border border-slate-100 dark:border-slate-700 divide-y divide-slate-100 dark:divide-slate-700">
+<!-- Notification Sound -->
+<button class="w-full flex items-center justify-between p-4 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors text-left">
+<p class="text-base font-medium text-slate-900 dark:text-white flex-1">Notification Sound</p>
+<div class="flex items-center gap-2">
+<span class="text-base text-slate-500 dark:text-slate-400">Droplet</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-[20px]">chevron_right</span>
+</div>
+</button>
+<!-- Haptic Feedback -->
+<div class="flex items-center justify-between p-4 gap-4">
+<p class="text-base font-medium text-slate-900 dark:text-white flex-1">Haptic Feedback</p>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom visual element to simulate content end -->
+<div class="h-6 w-full"></div>
+</div>
+<!-- Background decorative blur to simulate iOS depth in some contexts -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 bg-slate-50 dark:bg-[#0b1219] pointer-events-none"></div>
+</body></html>

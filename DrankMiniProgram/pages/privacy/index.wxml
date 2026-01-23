@@ -1,0 +1,75 @@
+<!-- pages/privacy/index.wxml -->
+<view class="container">
+  <view class="header">
+    <navigator class="back-btn" url="/pages/login/index">
+      <image src="/images/back-icon.png" mode="aspectFit"></image>
+      <text>返回</text>
+    </navigator>
+    <text class="page-title">隐私政策</text>
+  </view>
+
+  <view class="content">
+    <view class="section">
+      <text class="section-title">隐私政策</text>
+      <text class="section-content">
+        "喝了吗"饮水提醒小程序（以下简称"我们"）非常重视用户的隐私保护。本政策将详细说明我们如何收集、使用和保护您的个人信息。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">一、信息收集</text>
+      <text class="section-content">
+        1. 我们会收集您的微信头像、昵称等基本信息，用于识别用户身份。
+        2. 我们会收集您的饮水记录，包括饮水时间、饮水量等，用于提供统计分析。
+        3. 我们不会收集您的地理位置、联系方式等敏感信息。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">二、信息使用</text>
+      <text class="section-content">
+        1. 用户信息会用于识别用户身份和提供个性化服务。
+        2. 饮水记录会用于生成统计图表和计算成就勋章。
+        3. 我们不会将您的个人信息用于其他商业用途。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">三、信息保护</text>
+      <text class="section-content">
+        1. 您的个人信息会进行加密处理，存储在本地设备上。
+        2. 我们不会将您的个人信息上传到服务器或与第三方分享。
+        3. 用户可以随时删除自己的账户和数据。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">四、通知服务</text>
+      <text class="section-content">
+        1. 我们会使用微信小程序的通知功能发送饮水提醒。
+        2. 用户可以随时关闭通知功能。
+        3. 通知内容只会包含饮水提醒信息，不会包含个人敏感信息。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">五、儿童隐私</text>
+      <text class="section-content">
+        本小程序适用于所有年龄段的用户，但我们建议家长指导未成年人使用。
+        我们不会收集未成年人的额外信息，但会要求家长监护。
+      </text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">六、政策更新</text>
+      <text class="section-content">
+        我们有权随时更新隐私政策，用户需定期查看。
+        更新后的政策会在本页面发布，用户继续使用表示同意新政策。
+      </text>
+    </view>
+
+    <view class="last-updated">
+      <text>最后更新日期：2024年1月</text>
+    </view>
+  </view>
+</view>
